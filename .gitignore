@@ -1,0 +1,6 @@
+#temp/IDE files
+.vscode/
+.idea/
+*.log
+*.class
+__pycache__/

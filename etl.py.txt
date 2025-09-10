@@ -1,0 +1,7 @@
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("ETL").getOrCreate()
+df = spark.read.csv("sample_data.csv", header=True, inferSchema=True)
+df_clean = df.dropna()
+df_clean.show()
+df_clean.write.parquet("output/")
